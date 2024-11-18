@@ -1,0 +1,269 @@
+:root {
+    --font-size-16px: 1rem;
+    --font-size-22px: 1.375rem;
+    --font-size-28px: 1.75rem;
+    --font-size-32px: 2rem;    
+
+    --container-size-575px: 35.9375rem;
+    --container-size-600px: 37.5rem;
+    --container-size-670px: 41.875rem;
+    
+    --line-height-20px: 1.25rem;
+    --line-height-24px: 1.5rem;
+    --line-height-30px: 1.875rem;
+
+    --table-300px: 18.75rem;
+}
+
+.young-serif-regular {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.outfit-regular {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.outfit-bold {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+    /* CSS reset position */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "outfit", arial;
+    font-size: var(--16px);
+}
+    
+
+    /* @media min width pour visionnage pc */
+    /* FR : body en flex + justify content pour centrer .container 
+    -- 
+    EN : body in flex + justify content to center .container */
+
+@media(min-width: 768px) {
+    body {
+        background-color: hsl(30, 54%, 90%);
+        display: flex;
+        justify-content: center;
+        padding-bottom: 24px;
+    }
+    .container {
+        max-width: var(--container-size-670px);
+        background-color: white;
+        border-radius: 15px;
+        margin-top: 40px;
+        padding: 24px;
+    }
+    .img-omelette {
+        border-radius: 10px;
+    }
+}
+
+    /* @media max width pour visionnage petit ecran/smarphone */
+@media (max-width: 768px) {
+    .container {
+        background-color: white;
+        padding-bottom: 24px;        
+    }
+    
+}
+
+
+/* ligne separation */
+.hr-ligne {
+    background-color: hsl(30, 18%, 87%);
+    border-radius: 2px;
+    border: none;
+    margin: 10px auto 16px auto;
+    max-width: var(--container-size-600px);
+    height: 3px;
+}
+
+
+/* image */
+.img-container {
+    max-width: var(--container-size-600px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-omelette {
+    width: 100%;
+}
+
+
+/* title + description */
+.recipe-title {
+    margin-top: 20px;
+    margin-left: 8px;
+    font-family: "young serif", arial;
+    font-size: var(--font-size-32px);
+}
+
+.recipe-description {
+    font-size: var(--font-size-16px);
+    line-height: var(--line-height-24px);
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 24px;
+    max-width: var(--600px);
+}
+
+
+/* recette */ 
+.container-recipe-prep {
+    background-color: hsl(330, 100%, 98%);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--container-size-600px);
+    border-radius: 10px;
+    padding: 12px 0 12px 12px;
+}
+
+.recipe-prep::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+.prep-title {
+    color: hsl(332, 51%, 32%);
+    font-size: var(--font-size-22px);
+    margin-left: 4px;
+    margin-bottom: 8px;
+}
+
+    /* FR : utilisation de .prep-advice::marker pour changer 
+    couleur de la liste .prep-advice 
+    --
+    EN : .prep-advice::marker to change the color of the point 
+    of the list ".prep-adice*/
+
+.prep-advice::marker {
+    color: hsl(332, 51%, 32%);
+}
+
+    /* FR : padding-left pour deplacer le texte du point vers la droite 
+    --
+    EN : use of padding-left to move text to the right*/
+
+.prep-advice {
+    font-size: var(--font-size-16px);
+    color: black;
+    line-height: var(--line-height-30px);
+    padding-left: 10px;
+    margin-left: 25px;
+}
+
+
+/* liste d'ingredients */
+.container-list-ingredients {
+    margin-top: 16px;
+    margin-left: 8px;
+    padding-bottom: 14px;
+}
+
+    /* FR :mm chose que pour .prep-advice::marker 
+    -- 
+    EN : same as .prep-advice::marker */
+
+.ingredients::marker {
+    color: hsl(14, 45%, 36%);
+}
+
+.title-lists {
+    color: hsl(14, 45%, 36%);
+    font-size: var(--font-size-28px);
+    font-family: "young serif", arial;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.ingredients {
+    color: black;
+    font-size: var(--16px);
+    font-weight: 400;
+    line-height: var(--line-height-24px);
+    margin-left: 14px;
+    padding-left: 16px;
+}
+
+
+/* instructions */
+.container-instruction {
+    margin-left: 8px;
+    max-width: var(--container-size-575px);
+}
+
+.list-inscription::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+.list-inscription {
+    margin-bottom: 16px;
+    margin-left: 16px;
+    font-size: var(--font-size-16px);
+    line-height: var(--line-height-20px);
+    padding-left: 16px;
+    list-style-type: decimal;
+}
+
+
+/* nutrition part */
+.nutrition-container {
+    margin-left: 8px;
+}
+
+
+.nutr-info-table {
+    font-size: var(--font-size-16px);
+    max-width: var(--container-size-600px);
+    margin-bottom: 8px;
+}
+
+/* table */
+table {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--container-size-600px);
+    border-collapse: collapse;
+    padding-top: 26px;
+    padding-bottom: 32px;
+}
+
+.td-left-line {
+    width: var(--table-300px);
+    padding-left: 32px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.td-right-line {
+    width: var(--table-300px);
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+tr { 
+    border: 3px;
+    border-color: hsl(30, 18%, 87%);
+    border-radius: 2px;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+tr:last-child {
+    border: none;
+}
